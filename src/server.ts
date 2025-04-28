@@ -10,13 +10,12 @@ app.use(cors());
 
 connectDB()
   .then(() => {
-    console.log("Successfully connected to database");
     app.listen(process.env.PORT, () => {
       console.log(`💚 app is running on 🔌 port ${process.env.PORT}`);
     });
   })
   .catch((err: Error) => {
-    console.error("Failed to connect to database", err);
+    console.error("❌ Failed to connect to database", err);
     process.exit(1);
   });
 

@@ -13,9 +13,9 @@ const loadModels = async () => {
     await faceapi.nets.ssdMobilenetv1.loadFromDisk(modelsPath);
     await faceapi.nets.faceLandmark68Net.loadFromDisk(modelsPath);
     await faceapi.nets.faceRecognitionNet.loadFromDisk(modelsPath);
-    console.log("Loaded face-api.js models successfully");
+    console.log("🤖 Loaded face-api.js models successfully");
   } catch (err) {
-    console.error("Error loading face-api.js models: ", err);
+    console.error("❌ Error loading face-api.js models: ", err);
     process.exit(1);
   }
 };
@@ -34,11 +34,11 @@ export const box = async (req: Request, res: Response) => {
 
       res.json(detections);
     } catch (err) {
-      console.error("Error al procesar la imagen:", err);
+      console.error("❌ Error processing image:", err);
       res.status(400).json("Unable to process image with face-api.js");
     }
   } else {
-    res.status(400).json("No image input provided");
+    res.status(400).json("❌ No image input provided");
   }
 };
 
