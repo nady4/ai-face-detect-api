@@ -45,11 +45,11 @@ const login = async (req: Request, res: Response) => {
         username: user.username,
       },
     });
+
+    console.log("\nUser logged in ✅");
   } catch (err) {
     res.status(500).json({ error: "Error logging in" });
   }
-
-  console.log("\nUser logged in ✅");
 };
 
 export default login;

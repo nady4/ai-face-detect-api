@@ -28,9 +28,9 @@ export const box = async (req: Request, res: Response) => {
       const input = await canvas.loadImage(req.body.input);
       const detections = await faceapi
         // @ts-ignore: Type compatibility issues between canvas and face-api.js browser types in Node.js
-        .detectAllFaces(input)
-        .withFaceLandmarks()
-        .withFaceDescriptors();
+        .detectAllFaces(input);
+      //.withFaceLandmarks()
+      //.withFaceDescriptors();
 
       res.json(detections);
     } catch (err) {

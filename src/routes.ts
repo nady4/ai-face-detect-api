@@ -22,6 +22,6 @@ router.post("/verify-token", verifyToken, (req, res) => {
   });
 });
 
-router.post("/image", verifyToken, box);
+router.post("/image", box);
 
 export default router;
