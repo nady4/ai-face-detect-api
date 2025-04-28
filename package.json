@@ -3,17 +3,36 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --respawn src/server.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "node prisma/seed.js",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "postinstall": "npm run prisma:generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/promise-retry": "^1.1.6",
     "bcrypt": "^5.1.1",
+    "canvas": "^3.1.0",
     "cors": "^2.8.5",
     "express": "^4.21.1",
+    "face-api.js": "^0.20.0",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.13.1"
+    "prisma": "^6.6.0",
+    "promise-retry": "^2.0.1",
+    "tfjs-image-recognition-base": "^0.6.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
   }
 }
