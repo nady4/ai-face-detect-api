@@ -6,12 +6,12 @@ export const prisma = new PrismaClient();
 export const connectDB = () => {
   return retry(
     async (retry, number) => {
-      console.log(`Connecting to database (attempt ${number})...`);
+      console.log(`⚙️  Connecting to database (attempt ${number})...`);
       try {
         await prisma.$connect();
         console.log(
           `📁 Database connected (attempt ${number}) \n`,
-          process.env.PGHOST
+          process.env.DB_URL
         );
       } catch (err) {
         console.error(
