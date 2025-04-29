@@ -8,7 +8,7 @@ const { Canvas, Image, ImageData } = canvas;
 faceapi.env.monkeyPatch({ Canvas, Image, ImageData });
 
 const loadModels = async () => {
-  const modelsPath = path.join(__dirname, "ai-models");
+  const modelsPath = path.join(__dirname, "..", "models");
   try {
     await faceapi.nets.ssdMobilenetv1.loadFromDisk(modelsPath);
     await faceapi.nets.faceLandmark68Net.loadFromDisk(modelsPath);
@@ -22,7 +22,7 @@ const loadModels = async () => {
 
 loadModels();
 
-export const box = async (req: Request, res: Response) => {
+export const image = async (req: Request, res: Response) => {
   if (req.body.input) {
     try {
       const input = await canvas.loadImage(req.body.input);
@@ -42,4 +42,4 @@ export const box = async (req: Request, res: Response) => {
   }
 };
 
-export default box;
+export default image;

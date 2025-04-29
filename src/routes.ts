@@ -1,7 +1,7 @@
 import { Router } from "express";
-import box from "./controllers/box";
 import login from "./controllers/login";
 import register from "./controllers/register";
+import image from "./controllers/image";
 import { verifyToken } from "./controllers/verifyToken";
 
 const router = Router();
@@ -14,6 +14,6 @@ router.post("/login", login);
 
 router.post("/register", register);
 
-router.post("/image", box);
+router.post("/image", image);
 
 export default router;
