@@ -1,8 +1,19 @@
 <h1 align="center"> ai-face-detect </h1>
 
 <p align="center">
+<img src="https://github.com/nady4/ai-face-detect/raw/main/public/assets/brain.png"></img>
+</p>
+
+<p align="center">
 🧠 AI Face recognition and image description web app built in React.js
 </p>
+
+<div align="center">
+  <img src="https://github.com/nady4/ai-face-detect/raw/main/public/assets/1.png" height="350px">
+  <img src="https://github.com/nady4/ai-face-detect/raw/main/public/assets/2.png" height="350px">
+  <img src="https://github.com/nady4/ai-face-detect/raw/main/public/assets/3.png" height="350px">
+  <img src="https://github.com/nady4/ai-face-detect/raw/main/public/assets/4.png" height="350px">
+</div>
 
 <br></br>
 
@@ -50,11 +61,7 @@ npm run dev
 
 ## Endpoints 🛠️
 
-The code creates an Express.js app and sets up the following routes:
-
 - `GET /` : a protected route that requires a valid JSON web token to access.
-
-- `POST /verify-token`: a route that verifies the validity of a JSON web token.
 
 - `POST /login` : a route that logs in a user. Accepts a `username` and `password` in the request body, and returns a JSON web token if the login is successful.
 
