@@ -15,9 +15,11 @@
   <img src="https://github.com/nady4/ai-face-detect/raw/main/public/assets/4.png" height="350px">
 </div>
 
-<br></br>
+<br>
 
 ## 💾 Installation & Setup
+
+### Backend
 
 ```sh
 # 📥 Clone the repository
@@ -43,6 +45,22 @@ npm run prisma:migrate
 npm run dev
 ```
 
+### Frontend
+
+```sh
+# 📥 Clone the repository
+git clone https://github.com/nady4/ai-face-detect.git
+
+# 📂 Move to the project folder
+cd ai-face-detect
+
+# 📦 Install dependencies
+npm install
+
+# 🚀 Run the development server (you'll need a backend first)
+npm run dev
+```
+
 <br></br>
 
 ## 🚀 Tech Stack
@@ -57,7 +75,7 @@ npm run dev
 | TensorFlow.js-Node | ^4.22.0 |
 | Canvas (Node.js)   | ^3.1.0  |
 
-<br></br>
+<br>
 
 ## Endpoints 🛠️
 
@@ -69,7 +87,7 @@ npm run dev
 
 - `POST /image` : a protected route that requires a valid JSON web token to access. Accepts an image URL in the request body, and returns the image data processed by the face-api.js API
 
-<br></br>
+<br>
 
 ## Environment Variables 🔐️
 
@@ -79,7 +97,7 @@ The following environment variables are used in this code:
 - `JWT_KEY` : the secret key to sign JSON web tokens with
 - `PORT` : the port number to run the web server on
 
-<br></br>
+<br>
 
 ## 📬 Contact
 
