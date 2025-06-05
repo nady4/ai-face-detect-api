@@ -29,9 +29,6 @@ export const image = async (req: Request, res: Response) => {
       const detections = await faceapi
         // @ts-ignore: Type compatibility issues between canvas and face-api.js browser types in Node.js
         .detectAllFaces(input);
-      //.withFaceLandmarks()
-      //.withFaceDescriptors();
-
       res.json(detections);
     } catch (err) {
       console.error("❌ Error processing image:", err);
