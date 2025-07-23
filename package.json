@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn src/server.ts",
-    "build": "npm install && npm run prisma:generate && tsc && npm run copy-assets",
+    "build": "npm install && npm run prisma:generate && tsc && npm run copy-assets && npm run prisma:deploy",
+    "prisma:deploy": "prisma migrate deploy",
     "copy-assets": "copyfiles -u 1 'src/models/**/*' dist/",
     "prisma:generate": "prisma generate",
     "prisma:seed": "node prisma/seed.js",
